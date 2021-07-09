@@ -35,6 +35,7 @@ pip-sync:
 
 .venv:
 	$(PYTHON_VERSION) -m venv $(VENV)
+	$(PIP) install pip-tools
 	$(PIP) install -r requirements.txt
 	$(PIP) install -r dev-requirements.txt
 
@@ -43,3 +44,6 @@ requirements.txt: requirements.in
 
 dev-requirements.txt: dev-requirements.in
 	$(VENV_BIN)/pip-compile --generate-hashes dev-requirements.in --output-file dev-requirements.txt
+
+test:
+	$(VENV_BIN)/pytest
