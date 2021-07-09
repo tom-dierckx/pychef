@@ -51,3 +51,6 @@ test:
 tox:
 	python3 -m pip install --upgrade pip
 	pip install tox tox-gh-actions
+
+lint:
+	black chef
