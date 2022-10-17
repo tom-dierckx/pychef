@@ -1,9 +1,7 @@
 PyChef
 ======
 
-.. image:: https://secure.travis-ci.org/coderanger/pychef.svg?branch=master
-    :target: http://travis-ci.org/coderanger/pychef
-
+Updated version based on a fork of leigh-johnson/pychef to make it work in python 3.10.
 A Python API for interacting with a Chef server.
 
 Example
