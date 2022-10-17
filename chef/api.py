@@ -257,7 +257,7 @@ class ChefAPI(object):
 def autoconfigure_v2():
     """
     Re-uses Chef's configuration parsing & merging logic instead of reimplementing in Python :)
-    See load_config_chef.utils.json.rb script for additional info
+    See load_config_json.rb script for additional info
 
     Adds support for multiple configuration files from config.d directory.
     All files that end in .rb in the .d directory are loaded; other non-.rb files are ignored.
@@ -274,7 +274,7 @@ def autoconfigure_v2():
     https://docs.chef.io/workstation/config_rb/#d-directories
     """
     script = os.path.join(
-        os.path.dirname(chef.bin.__file__), "load_config_chef.utils.json.rb"
+        os.path.dirname(chef.bin.__file__), "load_config_json.rb"
     )
     stdout = subprocess.check_call(script)
     config = json.loads(stdout)
