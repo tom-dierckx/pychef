@@ -1,7 +1,7 @@
 DIST ?= dist/
 PIP ?= $(VENV_BIN)/pip
 PYTHON ?= $(VENV_BIN)/python
-PYTHON_VERSION ?= python3.9
+PYTHON_VERSION ?= python3.10
 VENV ?= .venv
 VENV_BIN ?= $(VENV)/bin
 # .PHONY: dev-requirements.txt requirements.txt release bdist_wheel clean-dist clean-pyc
