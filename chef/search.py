@@ -1,5 +1,5 @@
 import six
-import collections
+from collections.abc import Sequence
 import copy
 import six.moves.urllib.parse
 
@@ -31,7 +31,7 @@ class SearchRow(dict):
         return self._object
 
 
-class Search(collections.Sequence):
+class Search(Sequence):
     """A search of the Chef index.
 
     The only required argument is the index name to search (eg. node, role, etc).

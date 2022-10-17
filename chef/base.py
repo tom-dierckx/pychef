@@ -1,5 +1,5 @@
 import six
-import collections
+from collections.abc import Mapping
 
 import pkg_resources
 from chef.acl import Acl
@@ -8,7 +8,7 @@ from chef.api import ChefAPI
 from chef.exceptions import *
 
 
-class ChefQuery(collections.Mapping):
+class ChefQuery(Mapping):
     def __init__(self, obj_class, names, api):
         self.obj_class = obj_class
         self.names = names

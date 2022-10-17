@@ -1,6 +1,6 @@
 import six
 import abc
-import collections
+from collections.abc import MutableMapping
 
 from chef.api import ChefAPI
 from chef.base import ChefObject, ChefQuery, ChefObjectMeta
@@ -34,7 +34,7 @@ class DataBag(six.with_metaclass(DataBagMeta, ChefObject, ChefQuery)):
 
 
 class DataBagItem(
-    six.with_metaclass(DataBagMeta, ChefObject, collections.MutableMapping)
+    six.with_metaclass(DataBagMeta, ChefObject, MutableMapping)
 ):
     """A Chef data bag item object.
 
