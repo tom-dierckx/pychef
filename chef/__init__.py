@@ -1,8 +1,8 @@
 # Copyright (c) 2010 Noah Kantrowitz <noah@coderanger.net>
 
-__version__ = "0.4.0rc1"
+__version__ = "0.4.0rc4"
 
-from chef.api import ChefAPI, autoconfigure
+from chef.api import ChefAPI, autoconfigure, autoconfigure_v2
 from chef.client import Client
 from chef.data_bag import DataBag, DataBagItem
 from chef.exceptions import ChefError
